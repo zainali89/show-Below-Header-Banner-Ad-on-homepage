@@ -1,0 +1,7 @@
+The Below header banner ad is coded to not display in the Homepage because it disrupts the design of this page. If you still want to display
+is banner ad in the homepage you can customize the  Bootstrap Theme - Banner - Header - 970_90 widget and remove the conditions
+involving "home" in the if statement there:
+replace this if with the existing if 
+New: if(($w['show_ads'] == "1"  && $page['filename'] != "join" && $wa['custom_250'] == "" && $pars[0] != "join") || ($wa['custom_250'] == "1"  && $page['filename'] != "join" && $pars[0] != "join"))
+
+Existing one: if(($w['show_ads'] == "1" && $page['seo_type'] != "home" && $page['filename'] != "home" && $page['filename'] != "join" && $wa['custom_250'] == "" && $pars[0] != "join") || ($wa['custom_250'] == "1" && $page['seo_type'] != "home" && $page['filename'] != "home" && $page['filename'] != "join" && $pars[0] != "join"))
